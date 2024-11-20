@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perjanjian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .perjanjian {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>masukin nama kamu dong</h1>
+<label for="nama">Masukkan nama audiens:</label>
+<input type="text" id="nama" placeholder="Nama Audiens">
+<button onclick="tampilkanPerjanjian()">klik yuk </button>
+
+<div class="perjanjian" id="hasilPerjanjian" style="display: none;"></div>
+
+<script>
+    function tampilkanPerjanjian() {
+        var nama = document.getElementById("nama").value;
+        var hasil = `
+            <h2>dear, ${nama}!</h2>
+            <p>haiii selamat malam:</p>
+            <ol>
+                <li>haii sayang aku ingin sebenarnya merasa tidak enak dengan ledekan ledekan aku ke kamu ntah aku befikir kalo kamu tidak suka atau gimana 
+                    aku hanya ingin meminta maaf kalau kamu tersinggung atau gimana, kamu kalau semisal ada sesuatu yang tidak mengenakan atau gimana langsung
+                    saja sampaikan ke aku ya, jangan di tunda tunda okeii? goonight sayang<3.</li>
+               
+            </ol>
+            <p>Terima kasih atas waktu dan perhatian anda saya adi reyhan menucapkan terimakasi dan i love youuuuu!</p>
+        `;
+        document.getElementById("hasilPerjanjian").innerHTML = hasil;
+        document.getElementById("hasilPerjanjian").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
